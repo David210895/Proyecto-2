@@ -1,0 +1,233 @@
+/*
+    Globals
+*/
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Helvetica;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    color: #c8c8c8;
+    font-size: 24px;
+    border-left: 3px solid #c8c8c8;
+    padding-left: 7px;
+    margin-bottom: 26px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+/*
+layout
+*/
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+}
+
+
+/*
+Header
+*/
+header {
+    background-color: black;
+    /* padding: 0 0 0 0; */
+    /* padding: 0 0 0; */
+    padding: 0 20px;
+    /* padding: 0; */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header a {
+    color: white;
+}
+
+header .logo {
+    font-size: 32px;
+}
+
+header nav {
+    font-size: 16px;
+}
+
+header nav a {
+    color: #c7c7c7;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    margin-left: 15px;
+}
+
+/*
+Main
+*/
+main {
+    padding: 35px 0;
+}
+
+main section {
+    margin-bottom: 70px;
+}
+
+main section:hover h2{
+    color: #42704e;
+    border-color: #42704e;
+}
+
+/*
+Sobre mi
+*/
+.about-me .text{
+    display: flex;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.about-me ul {
+    display: flex;
+}
+
+.about-me li {
+    margin-right: 10px;
+}
+
+.about-me a {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 38px;
+    color: white;
+    font-size: 18px;
+}
+
+.about-me .linkedin {
+    background-color: #0077B5;
+}
+
+.about-me .github {
+    background-color: black;
+}
+
+.about-me .twitter {
+    background-color: #1EA1F2;
+}
+
+.about-me .skype {
+    background-color: #0495E2;
+}
+
+.about-me figure {
+    margin-right: 40px;
+}
+
+.about-me img {
+    border-radius: 100%;
+    border: 6px solid #f0f0f0;
+}
+
+.about-me p {
+    margin-bottom: 36px;
+}
+
+.about-me:hover img {
+    border-color: #42704e;
+}
+
+/*
+portfolio
+*/
+
+.portfolio .articles { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio article {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.portfolio article:hover .text {
+    display: flex;
+}
+
+.portfolio article:hover img {
+    border-color: #42704e;
+}
+
+.portfolio .text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0,0,0,.5);
+    color: white;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+.portfolio .text h3 {
+    margin-bottom: 6px;
+}
+
+.portfolio .text ul {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio .text li {
+    margin-right: 4px;
+}
+
+.portfolio .text span {
+    display: inline-block;
+    font-size: 11px;
+    font-family: Helvetica;
+    background-color: #4c2358;
+    padding: 5px 14px;
+    border-radius: 12px;
+}
+
+.portfolio img {
+    border: solid 10px #f0f0f0;
+}
