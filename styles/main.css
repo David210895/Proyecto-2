@@ -171,7 +171,6 @@ Sobre mi
 /*
 portfolio
 */
-
 .portfolio .articles { 
     display: flex;
     flex-wrap: wrap;
@@ -230,4 +229,44 @@ portfolio
 
 .portfolio img {
     border: solid 10px #f0f0f0;
+}
+
+
+/*
+Mis habilidades
+*/
+
+.skills .wrap-skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills .skill {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skills .skill:nth-child(odd) {
+    padding-right: 20px;
+}
+
+.skills .bar {
+    background: #4c2358;
+    height: 20px;
+    width: 100%;
+    border-radius: 11px;
+} 
+
+.skills .bar div {
+    height: 20px;
+    border-radius: 11px;
+    background: #42704e;
+}
+
+.skills h3 {
+    font-size: 13px;
+    font-weight: bold;
+    width: 110px;
 }
