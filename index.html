@@ -19,19 +19,20 @@
                 <h1 class="logo"><a>&lt;Sebastian Yabiku/&gt;</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="">Sobre mi</a></li>
-                        <li><a href="">Portafolio</a></li>
-                        <li><a href="">Mis habilidades</a></li>
-                        <li><a href="">Contactame</a></li>
+                        <li><a href="#about-me">Sobre mi</a></li>
+                        <li><a href="#portfolio">Portafolio</a></li>
+                        <li><a href="#skills">Mis habilidades</a></li>
+                        <li><a href="#contact">Contactame</a></li>
                     </ul>
                 </nav>
+                <i class="js_menu menu fas fa-bars"></i>
             </div>
         </header>
         <!--MAIN-->
         <main>
             <div class="container">
                 <!--SECTION SOBREMI-->
-                <section class="about-me">
+                <section id="about-me" class="about-me">
                     <h2>Sobre MI</h2>
                     <div class="text">
                         <figure>
@@ -70,7 +71,7 @@
                     </div>
                 </section>
                 <!--SECTION PORTAFOLIO-->
-                <section class="portfolio">
+                <section id="portfolio" class="portfolio">
                     <h2>Portafolio</h2>
                     <div class="articles">
                         <article>
@@ -215,7 +216,7 @@
                     </div>
                 </section>
                 <!--SECTION MISHABILIDADES-->
-                <section class="skills">
+                <section id="skills" class="skills">
                     <h2>Mis habilidades</h2>
                     <div class="wrap-skills">
                         <div class="skill">
@@ -311,7 +312,7 @@
                     </div>
                 </section>
                 <!--SECTION CONTACTAME-->
-                <section class="contact">
+                <section id="contact" class="contact">
                     <div class="form">
                         <h2>Contactame</h2>
                         <form class="wrap-form">
@@ -372,6 +373,15 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const button = document.querySelector('.js_menu');
+        const body = document.querySelector('body');
+        
+        button.addEventListener('click', function() {
+            body.classList.toggle('show-menu');
+        })
+    </script>
 </body>
 
 </html>

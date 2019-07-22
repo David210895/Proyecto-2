@@ -1,13 +1,13 @@
 /*
     Globals
 */
+
 * {
     box-sizing: border-box;
 }
 
-
 body {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     color: black;
 }
@@ -38,12 +38,18 @@ h3 {
 input,
 textarea {
     font-size: 12px;
-    border: solid 1px #d5d5d5; 
+    border: solid 1px #d5d5d5;
 }
+
+.show-menu nav {
+    display: block;
+}
+
 
 /*
 layout
 */
+
 .container {
     max-width: 960px;
     width: 100%;
@@ -54,12 +60,16 @@ layout
 /*
 Header
 */
+
 header {
     background-color: black;
     /* padding: 0 0 0 0; */
     /* padding: 0 0 0; */
     padding: 0 20px;
     /* padding: 0; */
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 header .container {
@@ -94,26 +104,36 @@ header li {
     margin-left: 15px;
 }
 
+header .menu {
+    color: white;
+    font-size: 28px;
+    display: none;
+}
+
+
 /*
 Main
 */
+
 main {
-    padding: 35px 0;
+    padding: 115px 0 35px;
 }
 
 main section {
     margin-bottom: 70px;
 }
 
-main section:hover h2{
+main section:hover h2 {
     color: #42704e;
     border-color: #42704e;
 }
 
+
 /*
 Sobre mi
 */
-.about-me .text{
+
+.about-me .text {
     display: flex;
 }
 
@@ -174,10 +194,12 @@ Sobre mi
     border-color: #42704e;
 }
 
+
 /*
 portfolio
 */
-.portfolio .articles { 
+
+.portfolio .articles {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -202,7 +224,7 @@ portfolio
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     color: white;
     padding: 13px;
     display: flex;
@@ -242,7 +264,7 @@ portfolio
 Mis habilidades
 */
 
-.skills .wrap-skills{
+.skills .wrap-skills {
     display: flex;
     flex-wrap: wrap;
 }
@@ -263,7 +285,7 @@ Mis habilidades
     height: 20px;
     width: 100%;
     border-radius: 11px;
-} 
+}
 
 .skills .bar div {
     height: 20px;
@@ -276,6 +298,7 @@ Mis habilidades
     font-weight: bold;
     width: 110px;
 }
+
 
 /*
 contact
@@ -291,10 +314,9 @@ contact
     padding-bottom: 20px;
 }
 
-
 .contact .form {
     width: 70%;
-    border-right:solid 1px #d5d5d5;
+    border-right: solid 1px #d5d5d5;
     padding-right: 20px;
 }
 
@@ -357,6 +379,7 @@ contact
     height: 44px;
 }
 
+
 /*
 Footer
 */
@@ -375,4 +398,178 @@ footer .container {
 footer a {
     color: white;
     text-decoration: underline;
+}
+
+
+/*
+Responsive
+*/
+
+@media (max-width:960px) {
+    header {
+        padding: 0;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    main section {
+        margin-bottom: 40px;
+    }
+    main .portfolio {
+        margin-bottom: 20px;
+    }
+    .portfolio article {
+        width: 49%;
+    }
+    .portfolio img {
+        width: 100%;
+    }
+    footer .container {
+        padding: 20px;
+    }
+}
+
+
+/*
+840 y 680 > TABLET Y GAMA ALTA CELULAR
+*/
+
+@media (max-width:768px) {
+    
+    header .menu {
+        display: block;
+    }
+    main section h2 {
+        color: #42704e;
+        border-color: #42704e;
+    }
+    .about-me img {
+        border-color: #42704e;
+    }
+    header nav {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0,.5);
+        z-index: 1;
+    }
+
+    header ul {
+        display: block;
+        text-align: center;
+        
+    }
+
+    header li {
+        margin: 0;
+    }
+
+    header nav a {
+        display: block;
+        padding: 20px;
+        color: white;
+        border-bottom: 3px solid white;
+    }
+}
+
+
+/*
+680 hasta 560 es para celulares gama media
+*/
+
+@media (max-width:660px) {
+    .about-me .text {
+        display: block;
+        text-align: center;
+    }
+    .about-me figure {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .about-me p {
+        margin-bottom: 20px;
+    }
+    .about-me ul {
+        justify-content: center;
+    }
+    .contact {
+        display: block;
+    }
+    .contact .form {
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+    .contact .address {
+        padding: 0;
+        padding-top: 20px;
+        border-top: solid 1px #d5d5d5;
+    }
+}
+
+
+/*
+560 hasta 320
+*/
+
+@media (max-width:560px) {
+    header .logo {
+        font-size: 24px;
+    }
+    .portfolio .articles {
+        display: block;
+    }
+    .portfolio article {
+        width: 100%;
+    }
+    .portfolio .text {
+        display: block;
+        position: initial;
+    }
+    .portfolio .text div {
+        margin-bottom: 20px;
+    }
+    .portfolio .text div:last-child {
+        margin-bottom: 0;
+    }
+    .portfolio article img {
+        border-color: #42704e;
+    }
+    .skills .wrap-skills {
+        display: block;
+    }
+    .skills .skill {
+        width: 100%;
+    }
+    .skills .skill:nth-child(odd) {
+        padding-right: 0;
+    }
+    .contact .wrap-form {
+        display: block;
+    }
+    .contact .wrap-form div {
+        width: 100%;
+    }
+    .contact .wrap-form div:nth-child(odd) {
+        padding-right: 0;
+    }
+    footer .container {
+        display: block;
+        text-align: center;
+    }
+    footer .container p:first-child {
+        margin-bottom: 15px;
+    }
+    .skills .skill {
+        position: relative;
+    }
+    .skills .skill h3 {
+        position: absolute;
+        color: white;
+        left: 10px;
+        font-size: 12px;
+    }
 }
