@@ -110,6 +110,11 @@ header .menu {
     display: none;
 }
 
+header .social {
+    margin: 0 0 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
 
 /*
 Main
@@ -144,6 +149,7 @@ Sobre mi
 
 .about-me ul {
     display: flex;
+    align-items: center;
 }
 
 .about-me li {
