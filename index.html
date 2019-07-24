@@ -15,8 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sebastian-yabiku.github.io/project2/" />
     <meta property="og:title" content="My portafolio - Sebastian Yabiku" />
-    <meta property="og:description"
-        content="Portafolio personal sobre fullstack de sebastian yabiku" />
+    <meta property="og:description" content="Portafolio personal sobre fullstack de sebastian yabiku" />
     <meta property="og:image" content="https://picsum.photos/216/216" />
 
     <!-- Twitter Card -->
@@ -24,17 +23,35 @@
     <meta name="twitter:site" content="@sebastianyabiku" />
     <meta name="twitter:creator" content="@sebastianyabiku" />
     <meta name="twitter:domain" content="https://sebastian-yabiku.github.io/project2/" />
-    <meta name="twitter:title"
-        content="My portafolio - Sebastian Yabiku" />
-    <meta name="twitter:description"
-        content="Portafolio personal sobre fullstack de sebastian yabiku" />
+    <meta name="twitter:title" content="My portafolio - Sebastian Yabiku" />
+    <meta name="twitter:description" content="Portafolio personal sobre fullstack de sebastian yabiku" />
     <meta name="twitter:image" content="https://picsum.photos/216/216" />
     <script src="https://kit.fontawesome.com/43f3cc2ec8.js"></script>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+
+    <script>window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));</script>
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3&appId=1009709955762555&autoLogAppEvents=1"></script>
     <div>
         <!--HEADER-->
         <header>
@@ -80,7 +97,9 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="twitter" href="">
+                                    <a class="twitter twitter-share-button"
+                                    href="https://twitter.com/intent/tweet"
+                                    >
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                 </li>
@@ -88,6 +107,13 @@
                                     <a class="skype" href="">
                                         <i class="fab fa-skype"></i>
                                     </a>
+                                </li>
+                                <li>
+                                    <div class="fb-share-button"
+                                        data-href="https://sebastian-yabiku.github.io/project2/"
+                                        data-layout="button_count" data-size="small"><a target="_blank"
+                                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsebastian-yabiku.github.io%2Fproject2%2F&amp;src=sdkpreparse"
+                                            class="fb-xfbml-parse-ignore">Compartir</a></div>
                                 </li>
                             </ul>
                         </div>
